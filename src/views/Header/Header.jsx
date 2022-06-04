@@ -1,5 +1,6 @@
 import "./Header.scss";
 import tom from "../../assets/images/Portfolio.webp";
+import resume from "../../assets/documents/Ritam\ Chakraborty\ Resume.pdf";
 
 export default function Header() {
     return (
@@ -13,7 +14,9 @@ export default function Header() {
                 </div>
                 <nav>
                     <div class="btns">
-                        <button class="btn">Resume</button>
+                        <a href={resume} target="_blank">
+                            <button class="btn">Resume</button>
+                        </a>
                         <button class="btn">Contact</button>
                     </div>
                     <div class="socials">
