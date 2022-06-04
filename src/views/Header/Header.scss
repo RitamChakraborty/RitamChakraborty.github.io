@@ -1,0 +1,96 @@
+@keyframes face-clip-animation {
+  0% {
+    clip-path: ellipse(70% 95% at 100% 0);
+    background-color: rgb(37, 35, 35);
+  }
+
+  25% {
+    clip-path: ellipse(65% 90% at 100% 0);
+    background-color: rgb(122, 106, 106);
+  }
+
+  50% {
+    clip-path: ellipse(60% 94% at 100% 0);
+    background-color: rgb(182, 48, 48);
+  }
+
+  75% {
+    clip-path: ellipse(63% 98% at 100% 0);
+    background-color: rgb(121, 113, 113);
+  }
+
+  100% {
+    clip-path: ellipse(70% 95% at 100% 0);
+    background-color: rgb(37, 35, 35);
+  }
+}
+
+.page1 {
+  height: 100%;
+  position: sticky;
+  background-color: #888;
+
+  .face {
+    position: absolute;
+    right: 0;
+    height: 80%;
+    clip-path: ellipse(75% 100% at 100% 0);
+    animation: face-clip-animation 5s forwards infinite linear;
+  }
+}
+
+header {
+  position: absolute;
+  margin: 5rem;
+
+  .intro {
+    color: rgb(145, 253, 253);
+    padding: 1.5rem 2rem;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 1rem;
+
+    .bonjour {
+      font-size: 4rem;
+    }
+
+    .name {
+      font-size: 5rem;
+    }
+
+    .deg {
+      font-size: 3rem;
+    }
+  }
+
+  nav {
+    margin: 1.5rem 0;
+
+    .btns {
+      display: flex;
+      justify-content: space-evenly;
+
+      .btn {
+        background: black;
+        color: cyan;
+        border: none;
+        outline: none;
+        padding: 1rem 1.5rem;
+        font-size: 2rem;
+        border-radius: 1rem;
+      }
+    }
+
+    .socials {
+      margin: 1rem 0;
+      display: flex;
+      justify-content: space-evenly;
+
+      a {
+        text-decoration: none;
+        color: aqua;
+        font-size: 2rem;
+      }
+    }
+  }
+}
