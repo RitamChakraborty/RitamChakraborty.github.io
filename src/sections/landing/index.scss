@@ -36,6 +36,7 @@
 #Landing .form form button {
     width: min-content;
     white-space: nowrap;
+    background-color: var(--color-primary);
 }
 
 #Landing {
@@ -51,8 +52,9 @@
             transform: translate(-50%, -50%);
             height: calc(var(--gap) * 8);
             width: calc(var(--gap) * 8);
-            clip-path: circle(50% at 50% 50%);
+            border-radius: 50%;
             overflow: hidden;
+            box-shadow: var(--color-dark-400) 0px 20px 30px -10px;
 
             img {
                 height: 100%;
