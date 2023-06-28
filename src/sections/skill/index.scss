@@ -1,0 +1,29 @@
+#Skill {
+    article {
+        .container {
+            display: grid;
+            gap: var(--gap);
+
+            .card {
+                display: grid;
+                gap: var(--gap);
+                
+                .header {
+                    display: flex;
+                    gap: var(--gap);
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 64rem) {
+    #Skill {
+        article {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }   
+}
