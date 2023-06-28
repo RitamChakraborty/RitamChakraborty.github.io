@@ -1,0 +1,77 @@
+#Landing {
+    display: grid;
+    gap: calc(var(--gap) * 2);
+    align-items: center;
+}
+
+#Landing>.description {
+    text-align: center;
+    text-wrap: balance;
+}
+
+#Landing>.description>h3 {
+    color: var(--color-bright-700);
+}
+
+#Landing>.description>h1 {
+    color: var(--color-bright-900);
+}
+
+#Landing>.description>p {
+    color: var(--color-bright-600);
+    font-weight: lighter;
+}
+
+#Landing .form {
+    height: min-content;
+    width: 75%;
+    margin: 0 auto;
+}
+
+#Landing .form form {
+    display: grid;
+    gap: calc(var(--gap) * 1.5);
+}
+
+#Landing .form form button {
+    width: min-content;
+    white-space: nowrap;
+}
+
+#Landing {
+    .form {
+        position: relative;
+        padding-top: calc(var(--gap) * 4);
+        margin-top: calc(var(--gap) * 4);
+
+        .avatar {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: calc(var(--gap) * 8);
+            width: calc(var(--gap) * 8);
+            clip-path: circle(50% at 50% 50%);
+            overflow: hidden;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    #Landing {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #Landing .description {
+        text-align: left;
+    }
+
+    #Landing .form {
+        width: 100%;
+    }
+}

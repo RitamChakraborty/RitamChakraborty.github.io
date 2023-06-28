@@ -1,34 +1,35 @@
 import React from "react";
-import "./index.css";
+import "./index.scss";
 
 export default function Landing() {
     return (
         <section id="Landing">
             <div className="description">
-                <h1>Easier Deployment</h1>
+                <h3>Hello, 🖐️</h3>
+                <h1>I'm Ritam Chakraborty</h1>
                 <p>
-                    Develop web apps of all kinds, from large scale enterprise to
-                    static websites for individuals. Fill out the form to try a demo
-                    of our platform.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laboriosam quasi itaque quod reiciendis a dolore sed magni rem doloribus.
                 </p>
-                <button className="outline-btn">Read More</button>
+                <button className="outline-btn">Download Resume</button>
             </div>
             <div className="card form">
-                <h2>Request a Demo</h2>
+                <div className="avatar">
+                    <img src="/images/avatar.png" alt="avatar" />
+                </div>
                 <form action="/sign-up" method="post">
                     <div className="form-control">
-                        <label for="name">Name</label>
+                        <label htmlFor="name">Name</label>
                         <input type="text" name="name" placeholder="Name" maxlength="50" required />
                     </div>
                     <div className="form-control">
-                        <label for="company-name">Company Name</label>
-                        <input type="text" name="company-name" placeholder="Company Name" maxLength="50" required />
-                    </div>
-                    <div className="form-control">
-                        <label for="">Email</label>
+                        <label htmlFor="">Email</label>
                         <input type="email" name="email" placeholder="Email" required />
                     </div>
-                    <button type="submit">Send</button>
+                    <div className="form-control">
+                        <label htmlFor="company-name">Message</label>
+                        <input type="text" name="message" placeholder="Message" maxLength="200" required />
+                    </div>
+                    <button type="submit">Let's Talk</button>
                 </form>
             </div>
         </section>
