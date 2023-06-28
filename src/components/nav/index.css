@@ -1,0 +1,15 @@
+nav > ul {
+    list-style: none;
+    display: flex;
+    gap: var(--gap);
+}
+
+nav A {
+    color: var(--color-bright-500);
+    transition: var(--animation-fast) border;
+}
+
+nav A:hover {
+    color: var(--color-bright-800);
+    border-bottom: 2px solid var(--color-bright-800);
+}

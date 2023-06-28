@@ -1,0 +1,28 @@
+#Hosting {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    gap: var(--gap);
+}
+
+#Hosting .image-placeholder {
+    display: grid;
+    place-items: center;
+}
+
+#Hosting img {
+    max-height: 30vh;
+    display: block;
+    display: none;
+}
+
+@media screen and (min-width: 32rem) {
+    #Hosting {
+        grid-template-columns: 2fr 1fr;
+        text-align: initial;
+    }
+
+    #Hosting img {
+        display: inline-block;
+    }
+}

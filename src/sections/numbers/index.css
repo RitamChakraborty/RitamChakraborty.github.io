@@ -1,0 +1,20 @@
+#Numbers {
+    text-align: center;
+    display: grid;
+}
+
+#Numbers article .material-icons {
+    font-size: calc(var(--gap) * 4);
+    color: var(--color-accent);
+}
+
+#Numbers article p {
+    font-weight: bold;
+}
+
+@media screen and (min-width: 32rem) {
+    #Numbers div {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
