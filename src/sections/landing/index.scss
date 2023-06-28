@@ -7,6 +7,10 @@
 #Landing>.description {
     text-align: center;
     text-wrap: balance;
+
+    a {
+        color: var(--color-bright-900);
+    }
 }
 
 #Landing>.description>h3 {

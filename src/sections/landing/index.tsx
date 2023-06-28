@@ -10,7 +10,9 @@ export default function Landing() {
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laboriosam quasi itaque quod reiciendis a dolore sed magni rem doloribus.
                 </p>
-                <button className="outline-btn">Download Resume</button>
+                <button className="outline-btn">
+                    <a target="_blank" href="/documents/Ritam Chakraborty Resume.pdf">Download Resume</a>
+                </button>
             </div>
             <div className="card form">
                 <div className="avatar">
