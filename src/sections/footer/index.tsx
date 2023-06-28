@@ -6,7 +6,7 @@ export default function Footer() {
         <>
             <footer>
                 <div className="copyright">
-                    <h2>Zeroku</h2>
+                    <h2>Ritam</h2>
                     <p>Copyright © 2020</p>
                 </div>
                 <div className="socials">

@@ -3,8 +3,8 @@
 /* ################## Variables ################## */
 
 :root {
-    --color-primary: rgb(65, 105, 225);
-    --color-accent: rgb(0, 34, 64);
+    --color-primary: #4169e1;
+    --color-accent: #e87c67;
     --color-bg: rgb(241, 241, 241);
     --color-bright-900: rgba(255, 255, 255, .9);
     --color-bright-800: rgba(255, 255, 255, .8);

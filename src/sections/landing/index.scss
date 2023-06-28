@@ -1,7 +1,7 @@
 #Landing {
     display: grid;
     gap: calc(var(--gap) * 2);
-    align-items: center;
+    align-items: start;
 }
 
 #Landing>.description {
@@ -18,7 +18,7 @@
 }
 
 #Landing>.description>p {
-    color: var(--color-bright-600);
+    color: var(--color-bright-800);
     font-weight: lighter;
 }
 
