@@ -51,14 +51,6 @@ main {
     padding: 0 var(--gap);
 }
 
-section {
-    padding: var(--gap) 0;
-}
-
-section:not(:first-of-type) {
-    margin-top: calc(var(--gap) * 2);
-}
-
 h1,
 h2,
 h3 {
@@ -133,7 +125,7 @@ input:active {
 
 .card {
     background-color: var(--color-bright-600);
-    padding: calc(var(--gap) * 1.5) calc(var(--gap) * 2);
+    padding: calc(var(--gap) * .5) calc(var(--gap) * 1.5);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     backdrop-filter: blur(10px);
