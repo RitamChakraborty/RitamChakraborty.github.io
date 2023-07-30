@@ -7,19 +7,30 @@ export default function Experience() {
             <h1>Experience</h1>
             <div className="experiences">
                 <article className="experience">
-                    <h3>August, 2023</h3>
+                    <h3>Presently Working</h3>
                     <h2><b>Software Engineer</b> at Cresen Solutions</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates saepe fugiat ipsum. Expedita commodi maxime facere blanditiis, error est iure?</p>
+                    <p>
+                        Developed and maintained features in a Spring Boot,
+                        Microservices and Angular application, ensuring reliable
+                        and efficient performance.
+                        Assisted in front-end styling changes and provided
+                        technical support to other teams.
+                        Mentored junior developers, helping them to grow in their
+                        careers.
+                        Participated in technical interviews to assess the skills of
+                        potential candidates.
+                    </p>
                 </article>
                 <article className="experience">
-                    <h3>October, 2021</h3>
+                    <h3>October, 2020 - August 2022</h3>
                     <h2><b>Jr. Product Specialist</b> at Cognizant</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates saepe fugiat ipsum. Expedita commodi maxime facere blanditiis, error est iure?</p>
-                </article>
-                <article className="experience">
-                    <h3>October, 2020</h3>
-                    <h2><b>Programmer Analyst</b> at Cognizant</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates saepe fugiat ipsum. Expedita commodi maxime facere blanditiis, error est iure?</p>
+                    <p>
+                        Worked in multiple client projects simultaneously,
+                        involving multi module maven, GWT project with MySQL
+                        in enhancements, debugging and database analysis
+                        Increased efficiency by 90% by automating the process of
+                        finding non-overridden upgrade files.
+                    </p>
                 </article>
             </div>
         </section>

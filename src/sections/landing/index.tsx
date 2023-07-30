@@ -16,7 +16,7 @@ export default function Landing() {
             </div>
             <div className="card form">
                 <div className="avatar">
-                    <img src="/images/avatar.png" alt="avatar" />
+                    <img src="/images/ritam1.jpg" alt="avatar" />
                 </div>
                 <form action="/sign-up" method="post">
                     <div className="form-control">
