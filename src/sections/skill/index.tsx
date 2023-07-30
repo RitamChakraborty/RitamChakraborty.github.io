@@ -13,7 +13,16 @@ export default function Skill() {
                             <img src="https://skillicons.dev/icons?i=java" alt="java" />
                             <h3>Java</h3>
                         </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil omnis eligendi culpa obcaecati sunt iure!</p>
+                        <p>
+                            Since the first time I tried Java, it has been my
+                            language of choice. I've spent a great deal of time
+                            learning this languages. I've built CLI applications
+                            like 
+                            <a href="https://github.com/RitamChakraborty/Tic_Tac_Toe">Tic-Tac-Toe</a>, <a href="https://github.com/RitamChakraborty/2048">2048</a>, <a href="https://github.com/RitamChakraborty/Christmas_Tree">Christmas Tree</a>. 
+                            I've explored swing and build few application with it. 
+                            Later it became my primary language for backend development
+                            with Spring Boot.
+                        </p>
                     </div>
                     <div className="box">
                         <div className="header">
