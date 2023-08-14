@@ -2,6 +2,7 @@
     --clr-primary: #F6F6F6;
     --clr-secondary: #333333;
     --clr-secondary-2: #555555;
+    --clr-secondary-3: #777777;
     --clr-accent: #C9C9C9;
     --clr-accent-2: #FFD6D6;
     --unit: 1rem;
@@ -26,6 +27,12 @@ section {
     height: 100vh;
     height: 100svh;
     padding: calc(var(--unit) * 2) var(--unit);
+    display: flex;
+
+    &.has-header {
+        height: 92vh;
+        height: 92svh;
+    }
 }
 
 .container {
@@ -35,25 +42,45 @@ section {
 
 h1, h2, h3 {
     color: var(--clr-secondary);
+    font-family: 'Yeseva One', cursive;
+    font-weight: 500;
 }
 
 h1 {
     font-size: 2.5rem;
     text-transform: uppercase;
-    font-family: 'Yeseva One', cursive;
-    font-weight: 500;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+    font-weight: 100;
 }
 
 p {
     font-size: 1rem;
-    font-family: 'Bree Serif', serif;
+    font-family: 'Roboto Slab', serif;
     color: var(--clr-secondary-2);
+    line-height: calc(var(--unit) * 1.5);
+
+    &.secondary {
+        color: var(--clr-secondary-3);
+    }
+
+    b {
+        font-weight: 600;
+    }
 }
 
 button {
     padding: calc(var(--unit) * 0.5) var(--unit);
     border-radius: calc(var(--unit) * 0.25);
     background-color: var(--clr-accent-2);
+    color: var(--clr-secondary-2);
     font-family: 'Bree Serif', serif;
     text-transform: uppercase;
     border: none;
@@ -62,11 +89,19 @@ button {
 }
 
 button:hover {
-    opacity: 0.8;
+    filter: contrast(0.9);
 }
 
 .flow {
     display: flex;
     flex-direction: column;
     gap: var(--unit);
+}
+
+header {
+    background-color: var(--clr-accent);
+    height: 8vh;
+    height: 8svh;
+    display: flex;
+    align-items: center;
 }
