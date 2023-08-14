@@ -99,6 +99,12 @@ button:hover {
     gap: var(--unit);
 }
 
+.flow-hoirizontal {
+    display: flex;
+    column-gap: var(--unit);
+    flex-wrap: wrap;
+}
+
 header {
     background-color: var(--clr-accent);
     height: 8vh;
