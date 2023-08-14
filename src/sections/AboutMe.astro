@@ -11,40 +11,42 @@ const age = currentDate.getFullYear() - birthDate.getFullYear();
 <Header>
   <h2>About Me</h2>
 </Header>
-<section id="About-Me" class="has-header flow">
-  <div>
-    <p class="secondary">
-      I am a full-stack software engineer with over
-      <b>{yearDifferent}+ years of experience</b>
-      in building and delivering high-quality software applications. I am proficient
-      in a variety of programming languages and technologies, including <b
-        >Java, Spring Boot, Angular, Postgres.</b
-      >
-      I am also a highly skilled problem solver and I am passionate about using my
-      expertise in code to solve real-world problems. I am always eager to learn
-      new things and I am always looking for ways to improve my skills. I am confident
-      that I have the skills and experience necessary to be successful in your company.
-    </p>
-  </div>
-  <div class="flow">
+<section id="About-Me" class="has-header">
+  <div class="container flow">
     <div>
-      <h3>Where I Live</h3>
-      <p>Midnapore</p>
-    </div>
-    <div>
-        <h3>What Is My Age</h3>
-        <p>{age} years</p>
-    </div>
-    <div>
-        <h3>What Langauges I Speak</h3>
-        <p>English, Bengali, Hindi</p>
-    </div>
+        <p class="secondary">
+          I am a full-stack software engineer with over
+          <b>{yearDifferent}+ years of experience</b>
+          in building and delivering high-quality software applications. I am proficient
+          in a variety of programming languages and technologies, including <b
+            >Java, Spring Boot, Angular, Postgres.</b
+          >
+          I am also a highly skilled problem solver and I am passionate about using my
+          expertise in code to solve real-world problems. I am always eager to learn
+          new things and I am always looking for ways to improve my skills. I am confident
+          that I have the skills and experience necessary to be successful in your company.
+        </p>
+      </div>
+      <div class="flow">
+        <div>
+          <h3>Where I Live</h3>
+          <p>Midnapore</p>
+        </div>
+        <div>
+            <h3>What Is My Age</h3>
+            <p>{age} years</p>
+        </div>
+        <div>
+            <h3>What Langauges I Speak</h3>
+            <p>English, Bengali, Hindi</p>
+        </div>
+      </div>
   </div>
 </section>
 
 <style lang="scss">
     #About-Me {
         display: flex;
-        justify-content: center;
+        align-items: center;
     }
 </style>
