@@ -1,0 +1,27 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-primary: #FAF3F0;
+    --clr-secondary: #333333;
+    --clr-accent: #FFD6D6;
+    --clr-accent-2: #C9C9C9;
+    --small-breakpoint: 30rem;
+}
+
+body {
+    background-color: var(--clr-primary);
+}
+
+section {
+    height: 100vh;
+    height: 100svh;
+}
+
+.container {
+    max-width: var(--small-breakpoint);
+    margin-inline: auto;
+}

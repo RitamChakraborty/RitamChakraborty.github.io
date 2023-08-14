@@ -1,16 +1,23 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import '../scss/global.scss';
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Ritam</title>
-	</head>
-	<body>
-		<MainLayout />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Poppins&family=Yeseva+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>Ritam</title>
+  </head>
+  <body>
+    <MainLayout />
+  </body>
 </html>
