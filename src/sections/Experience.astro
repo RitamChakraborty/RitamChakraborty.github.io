@@ -1,0 +1,74 @@
+---
+import Header from '../layouts/Header.astro';
+
+const cresenTechStack = [
+    'Java',
+    'Spring Boot',
+    'Microservices',
+    'Kafka',
+    'Angular',
+    'PostgreSQL',
+    'Azure'
+]
+const cognizantTechStack = [
+    'Java',
+    'Maven',
+    'Gradle',
+    'Spring',
+    'GWT',
+    'MySQL'
+]
+---
+
+<Header>
+    <h2>Experience</h2>
+</Header>
+<section id="Experience" class="has-header">
+    <div class="container flow">
+        <div class="flow">
+            <h3>Aug, 2022 - Present</h3>
+            <h2>Cresen Solutions</h2>
+            <p class="secondary">
+                Joined As Software Engineer. Develop and maintain a medical domain 
+                product. Work on Microservices Architecture. Own multiple features 
+                like multifactor authentication and user delegation. Valuable 
+                contribution towards improving the code quality of the project. 
+                Participated in intern mentorship program. Coordinated interviews 
+                for recruitment. 
+            </p>
+            <div class="techstack">
+                {cresenTechStack.map(i => <p>{i}</p>)}
+            </div>
+        </div>
+        <div class="flow">
+            <h3>Oct, 2020 - Aug, 2022</h3>
+            <h2>Cognizant</h2>
+            <p class="secondary">
+                Joined as Programmer Analyst Trinee. Within one year I was promoted 
+                to Jr. Product Specialist. Debugged and maintained an insurance 
+                domain product. Worked on Java projects. Helped to increase 
+                efficiency of a redundant task by 90% by automating the process 
+                of finding non-overridden upgrade files. I was given the role of 
+                Offshore lead because of the quality of my work. Participated in 
+                mentoring new joiners of the team.
+            </p>
+            <div class="techstack">
+                {cognizantTechStack.map(i => <p>{i}</p>)}
+            </div>
+            <div></div>
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+    .techstack {
+        display: flex;
+        column-gap: var(--unit);
+        flex-wrap: wrap;
+        
+        p {
+            width: max-content;
+            text-transform: uppercase;
+        }
+    }
+</style>
