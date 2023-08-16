@@ -7,6 +7,9 @@
     --clr-accent-2: #FFD6D6;
     --unit: 1rem;
     --small-breakpoint: 30rem;
+    --medium-breakpoint: 45rem;
+    --large-brteakpoint: 60rem;
+    --breakpoint: var(--small-breakpoint);
 }
 
 *, *::before, *::after {
@@ -34,10 +37,14 @@ section {
         height: 92vh;
         height: 92svh;
     }
+
+    &.center {
+        align-items: center;
+    }
 }
 
 .container {
-    max-width: var(--small-breakpoint);
+    max-width: var(--breakpoint);
     margin-inline: auto;
 }
 
@@ -116,6 +123,13 @@ header {
 a {
     color: var(--clr-secondary-2);
     text-decoration: none;
+}
+
+.link {
     font-weight: bold;
     border-bottom: 2px solid var(--clr-secondary-2);
+}
+
+@media screen and (min-width: 45rem) {
+    
 }
