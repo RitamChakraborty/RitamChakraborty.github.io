@@ -112,3 +112,10 @@ header {
     display: flex;
     align-items: center;
 }
+
+a {
+    color: var(--clr-secondary-2);
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid var(--clr-secondary-2);
+}

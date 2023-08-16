@@ -1,0 +1,82 @@
+---
+import Header from '../layouts/Header.astro';
+---
+
+<Header>
+    <h2>Projects</h2>
+</Header>
+<section id="Project" class="has-header">
+    <div class="container flow">
+        <div class="project-grid">
+            <div class="project-1">
+                <a href="https://github.com/RitamChakraborty/corona_tracker" target="_blank">
+                    <img src="/project-1.png" alt="Project 1">
+                </a>
+            </div>
+            <div>
+                <a href="https://github.com/RitamChakraborty/cssbudddyz" target="_blank">
+                    <img src="/project-2.png" alt="Project 2">
+                </a>
+            </div>
+            <div>
+                <a href="https://github.com/RitamChakraborty/pension-management" target="_blank">
+                    <img src="/project-3.png" alt="Project 3">
+                </a>
+            </div>
+            <div>
+                <a href="https://github.com/RitamChakraborty/my-hobbies" target="_blank">
+                    <img src="/project-4.png" alt="Project 4">
+                </a>
+            </div>
+            <div>
+                <a href="https://github.com/RitamChakraborty/n_queen_visualization" target="_blank">
+                    <img src="/project-5.png" alt="Project 5">
+                </a>
+            </div>
+        </div>
+        <div>
+            <p>
+                For more project visit my 
+                <a href="http://github.com/RitamChakraborty" target="_blank">
+                    GitHub Profile
+                </a>
+            </p>
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+    .project-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: calc(var(--unit) * 0.5);
+
+        div {
+            overflow: hidden;
+            filter: grayscale(1);
+            border-radius: var(--unit);
+            width: 100%;
+            transition: 200ms filter;
+
+            &:not(.project-1) {
+                aspect-ratio: 16 / 9;
+            }
+
+            &:hover {
+                filter: grayscale(0);
+                outline: 2px solid var(--clr-accent-2);
+                outline-offset: 2px;
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .project-1 {
+            grid-row: span 2;
+        }
+    }
+</style>
