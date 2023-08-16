@@ -21,7 +21,25 @@
         align-items: center;
     }
 
+    .hero-content br {
+        
+    }
+
     .hero-image {
         max-width: 30rem;
+    }
+
+    @media screen and (min-width: 60rem) {
+        #Landing {
+            .container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                align-items: center;
+
+                .hero-image {
+                    order: 2;
+                }
+            }
+        }
     }
 </style>
