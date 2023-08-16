@@ -35,7 +35,7 @@ import Header from '../layouts/Header.astro';
             </div>
         </div>
         <div>
-            <p>
+            <p class="align-center github-link">
                 For more project visit my 
                 <a href="http://github.com/RitamChakraborty" target="_blank" class="link">
                     GitHub Profile
@@ -58,6 +58,10 @@ import Header from '../layouts/Header.astro';
             width: 100%;
             transition: 200ms filter;
 
+            &.project-1 {
+                aspect-ratio: 9 / 10.35;
+            }
+
             &:not(.project-1) {
                 aspect-ratio: 16 / 9;
             }
@@ -77,6 +81,16 @@ import Header from '../layouts/Header.astro';
 
         .project-1 {
             grid-row: span 2;
+        }
+    }
+
+    .github-link {
+        margin-bottom: var(--unit);
+    }
+
+    @media screen and (min-width: 45rem) {
+        .project-grid {
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 </style>

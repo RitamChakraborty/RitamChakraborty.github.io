@@ -6,6 +6,7 @@
     --clr-accent: #C9C9C9;
     --clr-accent-2: #FFD6D6;
     --unit: 1rem;
+    --header-height: 8vh;
     --small-breakpoint: 30rem;
     --medium-breakpoint: 45rem;
     --large-brteakpoint: 60rem;
@@ -34,8 +35,7 @@ section {
     overflow-y: auto;
 
     &.has-header {
-        height: 92vh;
-        height: 92svh;
+        height: calc(100vh - var(--header-height));
     }
 
     &.center {
@@ -130,6 +130,19 @@ a {
     border-bottom: 2px solid var(--clr-secondary-2);
 }
 
+.align-center {
+    text-align: center;
+}
+
 @media screen and (min-width: 45rem) {
-    
+    :root {
+        --breakpoint: var(--medium-breakpoint);
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: calc(var(--unit) * 2);
+        align-items: center;
+    }
 }
