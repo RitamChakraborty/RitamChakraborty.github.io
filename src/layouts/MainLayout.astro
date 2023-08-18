@@ -5,7 +5,10 @@ import Experience from '../sections/Experience.astro';
 import Skill from '../sections/Skill.astro';
 import Project from '../sections/Project.astro';
 import Social from '../sections/Social.astro';
+import Header from './Header.astro';
 ---
+
+<Header />
 <main>
     <Landing />
     <AboutMe />
@@ -14,3 +17,48 @@ import Social from '../sections/Social.astro';
     <Project />
     <Social />
 </main>
+
+<script>
+    const header = document.querySelector('[data-header]');
+    const headerTitle = document.querySelector('[data-header-title]');
+    const intersectionObserver = new IntersectionObserver((entries) => {
+        for (const entry of entries) {
+            if (!entry.isIntersecting) continue;
+            const id = entry.target.id;
+            if (id === 'Landing') {
+                header.style.display = 'none';
+            } else {
+                header.style.display = 'flex';
+            }
+            switch (id) {
+                case 'About-Me': {
+                    headerTitle.textContent = 'About Me';
+                    break;
+                }
+                case 'Experience': {
+                    headerTitle.textContent = 'Expereinces';
+                    break;
+                }
+                case 'Skill': {
+                    headerTitle.textContent = 'Skills';
+                    break;
+                }
+                case 'Project': {
+                    headerTitle.textContent = 'Projects';
+                    break;
+                }
+                case 'Social': {
+                    headerTitle.textContent = 'Socials';
+                    break;
+                }
+            }
+        }
+    }, {
+        threshold: 1
+    });
+    const sections = document.querySelectorAll('section');
+    for (let i = 0; i < sections.length; ++i) {
+        const section = sections[i];
+        intersectionObserver.observe(section);
+    }
+</script>

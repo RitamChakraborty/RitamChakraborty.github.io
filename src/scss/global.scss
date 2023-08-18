@@ -27,6 +27,11 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
 img {
     max-width: 100%;
 }
@@ -41,9 +46,11 @@ section {
     padding: calc(var(--unit) * 2) var(--unit);
     display: flex;
     overflow-y: auto;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 
     &.has-header {
-        height: calc(100vh - var(--header-height));
+        padding-top: calc(var(--header-height) + var(--unit) * 2);
     }
 
     &.center {
@@ -124,9 +131,12 @@ button:hover {
 }
 
 header {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
     background-color: var(--clr-accent);
     height: var(--header-height);
-    display: flex;
+    display: none;
     align-items: center;
 }
 
