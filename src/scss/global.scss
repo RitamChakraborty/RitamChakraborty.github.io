@@ -50,8 +50,10 @@ header {
     z-index: 1;
     background-color: var(--clr-accent);
     height: var(--header-height);
-    display: none;
+    top: -100%;
     align-items: center;
+    display: flex;
+    transition: 200ms;
 }
 
 section {

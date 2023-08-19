@@ -26,9 +26,9 @@ import Header from './Header.astro';
             if (!entry.isIntersecting) continue;
             const id = entry.target.id;
             if (id === 'Landing') {
-                header.style.display = 'none';
+                header.style.top = '-100%';
             } else {
-                header.style.display = 'flex';
+                header.style.top = '0';
             }
             switch (id) {
                 case 'About-Me': {
