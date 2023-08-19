@@ -27,6 +27,10 @@
     box-sizing: border-box;
 }
 
+*::-webkit-scrollbar {
+    display: none;
+}
+
 html {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
@@ -38,6 +42,16 @@ img {
 
 body {
     background-color: var(--clr-primary);
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    background-color: var(--clr-accent);
+    height: var(--header-height);
+    display: none;
+    align-items: center;
 }
 
 section {
@@ -128,16 +142,6 @@ button:hover {
     display: flex;
     column-gap: var(--unit);
     flex-wrap: wrap;
-}
-
-header {
-    width: 100%;
-    position: fixed;
-    z-index: 1;
-    background-color: var(--clr-accent);
-    height: var(--header-height);
-    display: none;
-    align-items: center;
 }
 
 a {
