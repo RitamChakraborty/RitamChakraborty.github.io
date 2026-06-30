@@ -2,8 +2,8 @@
 const startDate = new Date("2020-10-24");
 const birthDate = new Date('1998-06-04');
 const currentDate = new Date();
-const yearDifferent = currentDate.getFullYear() - startDate.getFullYear();
-const age = currentDate.getFullYear() - birthDate.getFullYear();
+const yearDifferent = new Date(currentDate.getTime() - startDate.getTime()).getFullYear() - 1970;
+const age = new Date(currentDate.getTime() - birthDate.getTime()).getFullYear() - 1970;
 ---
 
 <section id="About-Me" class="has-header center">
