@@ -1,0 +1,341 @@
+---
+const discScores = [
+  {
+    dimension: 'Dominance (D)',
+    score: 85,
+    tag: 'High',
+    color: '#D9381E',
+    description: 'Results-driven, decisive, and focused on high-impact outcomes like cost reduction and system performance.'
+  },
+  {
+    dimension: 'Conscientiousness (C)',
+    score: 90,
+    tag: 'Very High',
+    color: '#0055B8',
+    description: 'Prioritizes architecture, observability, precision, data-backed metrics, and system security.'
+  },
+  {
+    dimension: 'Influence (I)',
+    score: 70,
+    tag: 'Moderate High',
+    color: '#D97706',
+    description: 'Engages teams through practical mentorship, technical hiring, and calm cross-functional alignment.'
+  },
+  {
+    dimension: 'Steadiness (S)',
+    score: 65,
+    tag: 'Moderate',
+    color: '#15803D',
+    description: 'Provides stable, dependable leadership during migrations and legacy application sustenance.'
+  }
+];
+
+const workingWithMe = [
+  { title: 'Bring data and metrics', detail: 'I value concrete benchmarks, clear ROI, and measurable production impact.' },
+  { title: 'Be direct and concise', detail: 'State the problem, propose options, and focus on practical engineering solutions.' },
+  { title: 'Focus on simplicity', detail: 'I favor systems that are easy to operate, reason about, and debug under load.' },
+  { title: 'Own outcomes end-to-end', detail: 'I empower engineers with autonomy, expecting clear ownership and high reliability.' }
+];
+
+const behaviorInAction = [
+  { label: 'In My Element', detail: 'Designing high-throughput architectures (Kafka, Fastify, AWS) and automating repetitive workflows to save costs.' },
+  { label: 'Under Stress', detail: 'Leans into data analysis and low-level debugging to solve the core root cause calmly and methodically.' },
+  { label: 'Decision Style', detail: 'Objective and evidence-based; balances rapid execution with architectural long-term trade-offs.' },
+  { label: 'Communication', detail: 'Transparent, pragmatic, and grounded in technical facts with low tolerance for fluff.' }
+];
+---
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ritam Chakraborty | DISC Profile</title>
+</head>
+
+<section id="DiscProfile" class="disc-page">
+  <div class="container flow">
+    <div class="intro flow align-center">
+      <h2>DISC Behavioral Profile</h2>
+      <p class="secondary">
+        Archetype: <b>Architectural Driver (DC)</b> — Combining decisive goal execution with 
+        rigorous system precision and data-driven engineering leadership.
+      </p>
+    </div>
+
+    <div class="disc-grid">
+      <div class="disc-card flow full-width">
+        <h3>Core DISC Dimensions</h3>
+        <div class="dimension-list">
+          {discScores.map((item) => (
+            <div class="dimension-item">
+              <div class="dimension-header">
+                <span class="name">{item.dimension}</span>
+                <span class="badge" style={`border-color: ${item.color}; color: ${item.color}`}>
+                  {item.tag} ({item.score}%)
+                </span>
+              </div>
+              <div class="bar-background">
+                <div class="bar-fill" style={`width: ${item.score}%; background-color: ${item.color}`}></div>
+              </div>
+              <p class="dimension-desc">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="disc-card flow">
+        <h3>How to Collaborate With Me</h3>
+        <ul class="collab-list">
+          {workingWithMe.map((item) => (
+            <li>
+              <b>{item.title}:</b> {item.detail}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="disc-card flow">
+        <h3>Behavioral Snapshot</h3>
+        <div class="behavior-grid">
+          {behaviorInAction.map((item) => (
+            <div class="behavior-item">
+              <span class="behavior-label">{item.label}</span>
+              <p>{item.detail}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Roboto+Slab:wght@400;500;600&family=Yeseva+One&display=swap');
+
+  /* Local SCSS variables matching your global design tokens */
+  $clr-primary: #F6F6F6;
+  $clr-secondary: #333333;
+  $clr-secondary-2: #555555;
+  $clr-secondary-3: #777777;
+  $clr-accent: #C9C9C9;
+  $clr-card-bg: #FFFFFF;
+  $unit: 1rem;
+
+  $font-yeseva: 'Yeseva One', cursive;
+  $font-bree: 'Bree Serif', serif;
+  $font-roboto: 'Roboto Slab', serif;
+
+  .disc-page {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    padding: calc(#{$unit} * 2)$unit;
+    background-color: $clr-primary;
+    overflow-y: visible;
+    scroll-snap-align: none;
+    scroll-snap-stop: normal;
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 45rem;
+      margin-inline: auto;
+    }
+  }
+
+  .flow {
+    display: flex;
+    flex-direction: column;
+    gap: $unit;
+  }
+
+  .align-center {
+    text-align: center;
+  }
+
+  .intro {
+    max-width: 60ch;
+    margin-inline: auto;
+
+    h2 {
+      font-family: $font-yeseva;
+      font-size: 2rem;
+      font-weight: 500;
+      color: $clr-secondary;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-family: $font-roboto;
+      font-size: 1rem;
+      color: $clr-secondary-2;
+      line-height: 1.5rem;
+
+      &.secondary {
+        color: $clr-secondary-3;
+      }
+
+      b {
+        font-weight: 600;
+        color: $clr-secondary;
+      }
+    }
+  }
+
+  /* Single Column by default (Mobile) */
+  .disc-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: calc(#{$unit} * 1.25);
+    width: 100%;
+  }
+
+  .disc-card {
+    background-color: $clr-card-bg;
+    border: 1px solid $clr-accent;
+    border-radius: 0.25rem;
+    padding: calc(#{$unit} * 1.25);
+    text-align: left;
+    min-width: 0;
+
+    h3 {
+      font-family: $font-bree;
+      font-size: 1.35rem;
+      font-weight: 100;
+      color: $clr-secondary;
+      margin-bottom: $unit;
+    }
+  }
+
+  .dimension-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $unit;
+    width: 100%;
+  }
+
+  .dimension-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    min-width: 0;
+  }
+
+  .dimension-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+
+    .name {
+      font-family: $font-bree;
+      font-size: 0.95rem;
+      color: $clr-secondary;
+    }
+
+    .badge {
+      font-family: $font-roboto;
+      font-size: 0.725rem;
+      font-weight: 600;
+      padding: 0.15rem 0.5rem;
+      border: 1px solid;
+      border-radius: 999px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+  }
+
+  .bar-background {
+    width: 100%;
+    height: 8px;
+    background-color: $clr-accent;
+    border-radius: 999px;
+    overflow: hidden;
+  }
+
+  .bar-fill {
+    height: 100%;
+    border-radius: 999px;
+    transition: width 0.3s ease;
+  }
+
+  .dimension-desc {
+    font-family: $font-roboto;
+    font-size: 0.875rem;
+    color: $clr-secondary-2;
+    line-height: 1.4;
+  }
+
+  .collab-list {
+    margin: 0;
+    padding-left: 1.2rem;
+    display: grid;
+    gap: calc(#{$unit} * 0.75);
+
+    li {
+      font-family: $font-roboto;
+      font-size: 0.95rem;
+      color: $clr-secondary-2;
+      line-height: 1.45;
+    }
+
+    b {
+      color: $clr-secondary;
+      font-weight: 600;
+    }
+  }
+
+  .behavior-grid {
+    display: grid;
+    gap: $unit;
+  }
+
+  .behavior-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+
+    .behavior-label {
+      font-family: $font-bree;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      color: $clr-secondary-3;
+      letter-spacing: 0.05em;
+    }
+
+    p {
+      font-family: $font-roboto;
+      font-size: 0.9rem;
+      color: $clr-secondary-2;
+      line-height: 1.4;
+    }
+  }
+
+  /* Desktop Viewport (45rem and above) */
+  @media screen and (min-width: 45rem) {
+    .disc-page .container {
+      max-width: 60rem;
+    }
+
+    .disc-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: calc(#{$unit} * 1.5);
+    }
+
+    .full-width {
+      grid-column: 1 / -1;
+    }
+
+    .dimension-list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: calc(#{$unit} * 1.25);
+    }
+  }
+</style>
