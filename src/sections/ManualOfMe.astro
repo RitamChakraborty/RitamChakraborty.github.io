@@ -1,0 +1,157 @@
+---
+const strengths = [
+  'Architecting resilient backend systems with Node.js, Fastify, Kafka, Redis, and AWS.',
+  'Leading engineering teams from idea to production with a clear delivery mindset.',
+  'Designing AI-powered workflows that reduce cost, latency, and manual work.',
+  'Shipping secure, scalable product features for voice, insurance, and enterprise platforms.'
+];
+
+const stack = [
+  'JavaScript',
+  'TypeScript',
+  'Node.js',
+  'Fastify',
+  'React',
+  'Angular',
+  'Java',
+  'Spring Boot',
+  'Kafka',
+  'Redis',
+  'AWS',
+  'Twilio',
+  'Docker',
+  'Flutter',
+  'Python'
+];
+
+const principles = [
+  'I prefer systems that are simple to reason about, easy to operate, and measurable in production.',
+  'I care deeply about reliability, observability, and reducing friction for the people using the product.',
+  'I build with automation in mind so teams spend less time on repetitive work and more time on meaningful decisions.',
+  'I mentor engineers by pairing strong execution with calm, practical leadership.'
+];
+---
+
+<section id="ManualOfMe" class="manual-page">
+  <div class="container flow">
+    <div class="intro flow">
+      <p class="secondary">
+        Engineering Lead with 5+ years of experience building AI-powered voice platforms,
+        backend systems, and cross-functional delivery workflows for real-world business problems.
+      </p>
+    </div>
+
+    <div class="manual-grid">
+      <div class="manual-card flow">
+        <h3>What I do best</h3>
+        <ul>
+          {strengths.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+
+      <div class="manual-card flow">
+        <h3>How I work</h3>
+        <ul>
+          {principles.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+
+      <div class="manual-card flow">
+        <h3>Core stack</h3>
+        <div class="skill-pills">
+          {stack.map((item) => <span>{item}</span>)}
+        </div>
+      </div>
+
+      <div class="manual-card flow">
+        <h3>Professional snapshot</h3>
+        <ul>
+          <li>Engineering Lead at eXp Realty, managing AI-driven voice concierge operations.</li>
+          <li>Previously worked across Spring Boot, Angular, and insurance domain systems.</li>
+          <li>Based in Newtown, Kolkata, with experience working remotely across product teams.</li>
+          <li>Strong focus on cost optimization, automation, team enablement, and dependable delivery.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  html.manual-page-route {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+
+  .manual-page {
+    min-height: 100vh;
+    height: auto;
+    padding: 2rem 1rem 3rem;
+    display: block;
+    overflow: visible;
+    scroll-snap-align: none;
+    scroll-snap-stop: normal;
+  }
+
+  .intro {
+    max-width: 70ch;
+    margin: 0 auto 1.5rem;
+  }
+
+  .manual-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .manual-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 1.5rem;
+    text-align: left;
+
+    h3 {
+      margin-bottom: 0.75rem;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.1rem;
+      display: grid;
+      gap: 0.6rem;
+    }
+  }
+
+  .skill-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+
+    span {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.45rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.02);
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .manual-page {
+      padding-top: 1.5rem;
+    }
+
+    .manual-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .manual-card {
+      padding: 1rem;
+    }
+  }
+</style>
