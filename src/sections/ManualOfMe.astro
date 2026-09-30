@@ -32,9 +32,16 @@ const principles = [
 ];
 ---
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ritam Chakraborty | Manual of Me</title>
+</head>
+
 <section id="ManualOfMe" class="manual-page">
   <div class="container flow">
-    <div class="intro flow">
+    <div class="intro flow align-center">
+      <h2>Manual of Me</h2>
       <p class="secondary">
         Engineering Lead with 5+ years of experience building AI-powered voice platforms,
         backend systems, and cross-functional delivery workflows for real-world business problems.
@@ -77,48 +84,122 @@ const principles = [
 </section>
 
 <style lang="scss">
+  @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Roboto+Slab:wght@400;500;600&family=Yeseva+One&display=swap');
+
+  /* Local SCSS design tokens */
+  $clr-primary: #F6F6F6;
+  $clr-secondary: #333333;
+  $clr-secondary-2: #555555;
+  $clr-secondary-3: #777777;
+  $clr-accent: #C9C9C9;
+  $clr-card-bg: #FFFFFF;
+  $unit: 1rem;
+
+  $font-yeseva: 'Yeseva One', cursive;
+  $font-bree: 'Bree Serif', serif;
+  $font-roboto: 'Roboto Slab', serif;
+
   html.manual-page-route {
     scroll-snap-type: none;
     scroll-behavior: auto;
   }
 
   .manual-page {
+    box-sizing: border-box;
+    width: 100%;
     min-height: 100vh;
     height: auto;
-    padding: 2rem 1rem 3rem;
+    padding: calc(#{$unit} * 2) $unit calc(#{$unit} * 3);
+    background-color: $clr-primary;
     display: block;
-    overflow: visible;
+    overflow-y: visible;
     scroll-snap-align: none;
     scroll-snap-stop: normal;
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 45rem;
+      margin-inline: auto;
+    }
+  }
+
+  .flow {
+    display: flex;
+    flex-direction: column;
+    gap: $unit;
+  }
+
+  .align-center {
+    text-align: center;
   }
 
   .intro {
     max-width: 70ch;
     margin: 0 auto 1.5rem;
+
+    h2 {
+      font-family: $font-yeseva;
+      font-size: 2rem;
+      font-weight: 500;
+      color: $clr-secondary;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-family: $font-roboto;
+      font-size: 1rem;
+      color: $clr-secondary-2;
+      line-height: 1.5;
+
+      &.secondary {
+        color: $clr-secondary-3;
+      }
+    }
   }
 
+  /* Mobile-first: single column layout */
   .manual-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    width: 100%;
   }
 
   .manual-card {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 18px;
+    background: $clr-card-bg;
+    border: 1px solid $clr-accent;
+    border-radius: 12px;
     padding: 1.5rem;
     text-align: left;
+    min-width: 0;
 
     h3 {
+      font-family: $font-bree;
+      font-size: 1.35rem;
+      font-weight: 400;
+      color: $clr-secondary;
       margin-bottom: 0.75rem;
     }
 
     ul {
       margin: 0;
-      padding-left: 1.1rem;
+      padding-left: 1.2rem;
       display: grid;
-      gap: 0.6rem;
+      gap: 0.65rem;
+
+      li {
+        font-family: $font-roboto;
+        font-size: 0.95rem;
+        color: $clr-secondary-2;
+        line-height: 1.45;
+      }
     }
   }
 
@@ -130,28 +211,27 @@ const principles = [
     span {
       display: inline-flex;
       align-items: center;
-      padding: 0.45rem 0.75rem;
+      padding: 0.4rem 0.75rem;
       border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      background: rgba(255, 255, 255, 0.02);
-      font-size: 0.82rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
+      border: 1px solid $clr-accent;
+      background: $clr-primary;
+      font-family: $font-roboto;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: $clr-secondary-2;
+      letter-spacing: 0.02em;
     }
   }
 
-  @media (max-width: 768px) {
-    .manual-page {
-      padding-top: 1.5rem;
+  /* Desktop breakpoint (45rem / 720px and above) */
+  @media screen and (min-width: 45rem) {
+    .manual-page .container {
+      max-width: 60rem;
     }
 
     .manual-grid {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    }
-
-    .manual-card {
-      padding: 1rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem;
     }
   }
 </style>
